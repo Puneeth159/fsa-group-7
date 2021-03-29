@@ -3,7 +3,7 @@ const loc = require('./models/location');
 
 exports.displays = (req, res) => {
     // Make a get request to /api/users
-    axios.get('https://fsa-group-7.herokuapp.com/')
+    axios.get('https://fsa-group-7.herokuapp.com/location')
         .then(function(response) {
             res.render('display', { locations: response.data });
             // console.log(JSON.stringify(response), "==> responssss");
@@ -50,7 +50,7 @@ exports.addlocation = (req, res) => {
         longitude: req.body.longitude
     }
    
-    axios.post('https://fsa-group-7.herokuapp.com/create', body)
+    axios.post('https://fsa-group-7.herokuapp.com/locations/create', body)
     .then(res => () => {
         res.render("display", { locationv: res.data })
         console.log(res.data);
