@@ -1,0 +1,101 @@
+<!-- include header -->
+<%- include('header') %>
+    <!-- /include header -->
+    <style>
+        #field {
+            height: 200px;
+            width: 200px;
+            background: blue;
+            float: left;
+            margin-left: 2px;
+            border: 1px solid #ccc;
+        }
+        #field1 {
+            height: 200px;
+            width: 200px;
+            background: black;
+            float: left;
+            margin-left: 2px;
+            border: 1px solid #ccc;
+        }
+        .d {
+            padding-left: 30%;
+        }
+        #t {
+            background-color: black;
+            color: white;
+            border: none;
+            align-content: center;
+            margin-top: 5%;
+            border-radius: 5px;
+            padding-left: 2%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-right: 2%;
+        }
+        .k {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            height: 50px;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0;
+            background-color: black;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            height: 50px;
+        }
+        article {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -220px;
+            margin-top: -120px;
+        }
+    </style>
+
+    <body>
+
+        <header>
+            <div class="k">Locandyy</div>
+        </header>
+        <main>
+            <article>
+                <div>
+                    <div id="container">
+                        <div id="field"></div>
+                        <div id="field1"></div>
+                        <br />
+                    </div>
+                    <!-- <div class = "d">
+                        <button type="button" class="btn btn-black" onclick="productUpdate();">Add locations</button>
+                    </div> -->
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <form action="http://localhost:3000/locations/create">
+                            <input type="submit" value="Add Location" id="t" />
+                        </form>
+                    </div>
+                    <!-- <div class = "d">
+                        <button type="button" class="btn btn-black" onclick="displays()">Add locations</button>
+                    </div> -->
+                </div>
+                </div>
+            </article>
+        </main>
+        <!-- <script type="module" src="./scripts/main.js "></script> -->
+        <link href="../public/Styles/main.css" rel="stylesheet" type="text/css">
+    </body>
+    <br>
+    <footer class="foot">
+
+        <a href="https://github.com/Puneeth159/fsa-group-7">
+            <i class="fab fa-github "></i> GitHub</a>
+    </footer>
