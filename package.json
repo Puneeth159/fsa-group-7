@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Puneeth159/fsa-group-7#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "axios": "^0.21.1",
+    "consolidate": "^0.16.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.2"
   }
 }
