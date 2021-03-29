@@ -1,44 +1,58 @@
-var express = require('express');
-var app = express();
-var env = require('dotenv').config({silent:true})
-const router = require('./routes/router')
 const dotenv = require('dotenv');
+var env = require('dotenv').config({ silent: true })
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const helmet = require('helmet');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const mongoose = require("mongoose");
+const engines = require('consolidate');
+const expressLayouts = require('express-ejs-layouts');
+const port = process.env.PORT || 3001
 
-// app.use('/', router)
-// app.use(express.static(__dirname+'/public/'))
-const mongoose = require("mongoose")
-mongoose.set('useNewUrlParser', true)
-mongoose.set('useFindAndModify', true)
-mongoose.set('useCreateIndex', true)
 
+const app = express();
+
+
+app.use(express.static('public'));
+
+app.use(helmet());
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.engine('ejs', engines.ejs);
 
-var bodyParser = require('body-parser');
-// require('dotenv').config({ path: 'ENV_FILENAME' });
-
-// const vars = dotenv.config({ path: '.env' });
-// if (vars.error) {
-//     throw vars.error;
-// }
-
-const port = process.env.PORT || 3000
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use(function(req, res, next){
-//   res.header('Access-Control-Allow_origin', "*");
-//   res.setHeader('Access-Control-Allow_origin-Method', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
-//   res.header('Access-Control-Allow-Header',"Origin, X-Requested-With, Content-Type, Accept");
-// })
 
-app.use(express.static(__dirname + '/public'));
+// Use Express middleware to configure routing
+const routing = require('./routes/router.js');
 
-mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then((res) =>{
-  app.listen(port, function() {
-    return "Connected to Database"
-   
- })
+app.set('view engine', 'ejs')
+app.engine('ejs', engines.ejs)
+app.set('views', path.join(__dirname, './views/'))
+app.set('view engine', 'ejs')
+app.engine('ejs', engines.ejs)
+
+const router = require('./routes/router')
+app.use('/', router)
+app.use(bodyParser.json({ type: "application/*+json" }));
+
+app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/location/'));
+
+
+mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then((res) => {
+    app.listen(port, function() {
+        return "Connected to Database"
+    })
 }).catch((e) => {
-  console.log(e,"--error")
+    console.log(e, "--error")
 })
-app.use(require('./routes/router.js'))

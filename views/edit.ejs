@@ -1,0 +1,84 @@
+<!-- include header -->
+<%- include('header') %>
+    <!-- /include header -->
+
+    <style>
+        #t {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            height: 50px;
+        }
+        .k {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            height: 50px;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0;
+            background-color: black;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            height: 50px;
+        }
+        .f {
+            text-align: center;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <header>
+            <header>
+                <div class="k">FSA-Group-7</div>
+            </header>
+
+        </header>
+        <main>
+            <br>
+            <br>
+            <br>
+            <div class="center">
+                <form action="/locations/edit/<%= locations._id %>" method="POST" id="update-location">
+                    <form action="/locations/edit/<%= locations._id %>" method="POST">
+
+                        <div class="form-group">
+                            <label for="name" class="c1">Name: </label>
+                            <!-- <input type="text" name="name" value="<%= locations._id %>"> -->
+                            <input type="text" name="locationName" value="<%= locations.locationName %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="latitude" class="c1">Latitude: </label>
+                            <input type="decimal" name="latitude" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="longitude" class="c1">Longitude: </label>
+                            <input type="decimal" name="longitude" value="">
+                        </div>
+
+
+
+
+                        <div class="form-group">
+
+
+                            <button type="submit" class="btn btn-black">Update</button>
+                        </div>
+
+
+                    </form>
+            </div>
+        </main>
+        <footer class="foot">
+
+            <a href="https://github.com/Puneeth159/fsa-group-7">
+                <i class="fab fa-github "></i> GitHub</a>
+        </footer>

@@ -1,0 +1,95 @@
+<!-- include header -->
+<%- include('header') %>
+    <!-- /include header -->
+    <style>
+        #field {
+            height: 200px;
+            width: 200px;
+            background:#FFDC00;
+            float: left;
+            margin-left: 2px;
+            border: 1px solid #ccc;
+        }
+        #field1 {
+            height: 200px;
+            width: 200px;
+            background:#FF4136;
+            float: left;
+            margin-left: 2px;
+            border: 1px solid #ccc;
+        }
+        .d {
+            padding-left: 30%;
+        }
+        #t {
+            background-color: 0074D9;
+            color: white;
+            border: none;
+            align-content: center;
+            margin-top: 5%;
+            border-radius: 5px;
+            padding-left: 2%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-right: 2%;
+        }
+        .k {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            height: 50px;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0;
+            background-color:#474747;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            height: 50px;
+        }
+        article {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -220px;
+            margin-top: -120px;
+        }
+    </style>
+
+    <body>
+
+        <header>
+            <div class="k">FSA-GROUP-7</div>
+        </header>
+        <main>
+            <article>
+                <div>
+                    <div id="container">
+                        <div id="field"></div>
+                        <div id="field1"></div>
+                        <br />
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <form action="http://localhost:3000/locations/create">
+                            <input type="submit" value="Add Location" id="t" />
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </article>
+        </main>
+        <!-- <script type="module" src="./scripts/main.js "></script> -->
+        <link href="../public/Styles/main.css" rel="stylesheet" type="text/css">
+    </body>
+    <br>
+    <footer class="foot">
+
+        <a href="https://github.com/Puneeth159/fsa-group-7">
+            <i class="fab fa-github "></i> GitHub</a>
+    </footer>

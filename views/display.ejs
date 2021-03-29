@@ -1,0 +1,95 @@
+<!-- include header -->
+<%- include('header') %>
+    <!-- /include header -->
+    <style>
+        .k {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            height: 50px;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0;
+            background-color: black;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 25px;
+            height: 50px;
+        }
+    </style>
+
+    <body>
+        <header>
+            <div class="k">FSA-Group-7</div>
+        </header>
+        <main>
+            <br><br><br><br>
+            <table class="table table-inverse">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>longitude</th>
+                        <th>Latitude</th>
+                        <th>edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(var i=0; i < locations.length; i++) { %>
+                        <tr>
+                            <td>
+                               
+                                    <%= locations[i].locationName %>
+                            </td>
+                            <td>
+                                <%= locations[i].longitude %>
+                            </td>
+                            <td>
+                                <%= locations[i].latitude %>
+                            </td>
+                            <td>
+                                <form action="/locations/editview/<%= locations[i]._id %>" >
+                                    <div class="form">
+                                        <button type="submit">EDIT<%= locations[i].id %></button>
+                                    </div>
+                                </form>
+                                
+                            </td>
+                            <td>
+                                <form action="/locations/delete/<%= locations[i]._id %>" method="POST">
+                                    <div class="form">
+                                        <button type="submit">Delete<%= locations[i].id %></button>
+                                    </div>
+                                </form>
+                            </td>
+                            <!-- <a href="/locations/delete">Delete</a> -->
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </main>
+        <script type="module" src="./scripts/main.js "></script>
+        <link href="../public/Styles/main.css" rel="stylesheet" type="text/css">
+
+
+    </body>
+    <footer class="foot">
+
+        <a href="https://github.com/Puneeth159/fsa-group-7">
+            <i class="fab fa-github "></i> GitHub</a>
+
+        <br>
+
+
+            <script>
+                function func1() {
+                }
+                function func2() {
+                    console.log("I am in the click handler 2!");
+                }
+            </script>

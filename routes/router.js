@@ -10,8 +10,8 @@ const locationController = require('../controllers/locationController');
 const services = require('../services')
 
 
-router.get('/', (req, res, next) => {
-    res.render('../views/index', { title: 'index' })
+router.get('/', (req, res,next) => {
+  res.render('../views/index', { title: 'index' })
 })
 
 
