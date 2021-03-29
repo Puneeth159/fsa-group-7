@@ -1,4 +1,4 @@
-const  axios=require('axios');
+const  axios=require('');
 exports.show = (req, res) => {
     // Make a get request to /api/users
     // axios.get("http://localhost:3000/locations")

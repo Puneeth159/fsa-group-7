@@ -33,7 +33,7 @@ exports.updateLocation = (req, res) => {
 // exports.updateLocation = (req, res) => {
 //     res.render("edit")
 //  
-//     axios.put('http://localhost:3000/location/edit', { params: { id: req.query._id } })
+//     .put('http://localhost:3000/location/edit', { params: { id: req.query._id } })
 //         .then(function(locationData) {
 //             res.render("edit", { locationv: locationData.data })
 //             console.log(locationData);
