@@ -21,6 +21,10 @@ This is a full stack application
 * Back End: Express js
 * Front End: HTML,CSS,JavaScript.
 
+## References
+
+- https://expressjs.com/en/starter/hello-world.html
+- https://github.com/Chandupolisetty/Locandyy
 
 
 
