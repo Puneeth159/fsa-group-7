@@ -42,20 +42,24 @@ exports.updateLocation = (req, res) => {
 //             res.send(err);
 //         })
 // }
+// exports.addlocation = (req, res) => {
+//     res.render('create');
+//     var body = {
+//         locationName: req.body.locationName,
+//         latitude: req.body.latitude,
+//         longitude: req.body.longitude
+//     }
+   
+//     axios.post('https://fsa-group-7.herokuapp.com/locations/create', body)
+//     .then(res => () => {
+//         res.render("display", { locationv: res.data })
+//         // console.log(res.data);
+//     })
+//     .catch(err => {
+//         res.send(err);
+//     })
+// }
+
 exports.addlocation = (req, res) => {
     res.render('create');
-    var body = {
-        locationName: req.body.locationName,
-        latitude: req.body.latitude,
-        longitude: req.body.longitude
-    }
-   
-    axios.post('https://fsa-group-7.herokuapp.com/locations/create', body)
-    .then(res => () => {
-        res.render("display", { locationv: res.data })
-        console.log(res.data);
-    })
-    .catch(err => {
-        res.send(err);
-    })
 }
