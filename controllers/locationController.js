@@ -42,8 +42,12 @@ exports.create = (req, res) => {
                 let status = err.status || err.statusCode || err.code || 500;
         res.status(status).send({ status, error: err });
              }
+             else{
+
+             
                 //  res.send({ status: 200, response: "Location Create Successfully" });
                 res.redirect('/locations/');
+            }
       } )
 }
 
