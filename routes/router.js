@@ -10,11 +10,11 @@ const locationController = require('../controllers/locationController');
 const services = require('../services')
 
 
-router.get('/', (req, res,next) => {
-  res.render('../views/index', { title: 'index' })
-})
+// router.get('/', (req, res,next) => {
+//   res.render('../views/index', { title: 'index' })
+// })
 
-
+router.get('/',locationController.random);
 
 router.get('/locations/', services.displays);
 router.get('/locations/editview/:id', services.updateLocation);

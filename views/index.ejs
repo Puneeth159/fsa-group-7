@@ -5,22 +5,25 @@
         #field {
             height: 250px;
             width: 250px;
-            background:#FFDC00;
+            background: #FFDC00;
             float: left;
             margin-left: 4px;
             border: 1px solid #ccc;
         }
+
         #field1 {
             height: 250px;
             width: 250px;
-            background:#FF4136;
+            background: #FF4136;
             float: left;
             margin-left: 4px;
             border: 1px solid #ccc;
         }
+
         .d {
             padding-left: 30%;
         }
+
         #t {
             background-color: 0074D9;
             color: white;
@@ -33,6 +36,7 @@
             padding-bottom: 2%;
             padding-right: 2%;
         }
+
         .k {
             background-color: black;
             text-align: center;
@@ -40,16 +44,18 @@
             font-size: 25px;
             height: 50px;
         }
+
         .foot {
             position: fixed;
             bottom: 0;
-            background-color:#474747;
+            background-color: #474747;
             text-align: center;
             color: white;
             width: 100%;
             font-size: 25px;
             height: 50px;
         }
+
         article {
             position: absolute;
             left: 50%;
@@ -68,25 +74,31 @@
             <article>
                 <div>
                     <div id="container">
-                        <div id="field"></div>
-                        <div id="field1"></div>
-                        <br />
-                    </div>
-                    <br>
-                    <br>
 
-                    <div class="form-group">
-                        <form action="https://fsa-group-7.herokuapp.com/locations/create">
-                            <input type="submit" value="Add Location" id="t" />
-                        </form>
+                        <div id="field" href="/">
+                            <%= v.locationName %>
+                        </div>
                     </div>
-                    <div class="form-group-1">
-                        <form action="https://fsa-group-7.herokuapp.com/locations/">
-                            <input type="submit" value="Display Location" id="t" />
-                        </form>
-                    </div>
+                    <div id="field1"></div>
+                    <br />
+                </div>
+                <br>
+
+
+                <div class="form-group">
+                    <form action="https://fsa-group-7.herokuapp.com/locations/create">
+                        <input type="submit" value="Add Location" id="t" />
+                    </form>
+                </div>
+                <div class="form-group-1">
+                    <form action="https://fsa-group-7.herokuapp.com/locations/">
+                        <input type="submit" value="Display Location" id="t" />
+                    </form>
                 </div>
                 </div>
+                </div>
+                <br>
+                <br><br><br>
             </article>
         </main>
         <!-- <script type="module" src="./scripts/main.js "></script> -->

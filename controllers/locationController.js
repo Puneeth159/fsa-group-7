@@ -156,7 +156,15 @@ exports.update = (req, res) => {
 //         res.send('Error' + err)
 //     }
 // })
+exports.random=(req,res) => {
+    LocationSchema.find().then(location => {
+        const r=Math.floor(Math.random()*location.length);
+        let v=location[r];
+        console.log(v);
+        res.render('index',{v})
+    })
 
+}
 
 exports.delete = (req, res) => {
     const id = req.params.id;
