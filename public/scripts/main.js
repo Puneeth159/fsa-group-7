@@ -11,8 +11,8 @@ function main() {
     if (incrementer == 1) {
         document.getElementById("ready").innerHTML = "Click to start playing";
         document.getElementById("ready1").innerHTML = " ";
-        let utterance = new SpeechSynthesisUtterance("Click to start playing");
-        speechSynthesis.speak(utterance);
+        // let utterance = new SpeechSynthesisUtterance("Click to start playing");
+        // speechSynthesis.speak(utterance);
         document.getElementById("lname").innerHTML = "        ";
     }
     incrementer = 0;
