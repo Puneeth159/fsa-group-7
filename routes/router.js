@@ -15,6 +15,7 @@ const services = require('../services')
 // })
 
 router.get('/',locationController.random);
+router.get('/test',locationController.ran);
 
 router.get('/locations/', services.displays);
 router.get('/locations/editview/:id', services.updateLocation);

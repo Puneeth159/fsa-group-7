@@ -165,7 +165,15 @@ exports.random=(req,res) => {
     })
 
 }
+exports.ran=(req,res) => {
+    LocationSchema.find().then(location => {
+        const r=Math.floor(Math.random()*location.length);
+        let value=location[r];
+        console.log(value);
+        res.render('test',{value})
+    })
 
+}
 exports.delete = (req, res) => {
     const id = req.params.id;
 

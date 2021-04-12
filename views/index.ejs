@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- include header -->
 <%- include('header') %>
     <!-- /include header -->
@@ -74,14 +76,32 @@
             <article>
                 <div>
                     <div id="container">
+                        <div id="bgrone">
 
-                        <a id="field" href="https://fsa-group-7.herokuapp.com/">
-                            <span>
-                                <%= v.locationName %>
-                            </span></a>
+                            <a id="field">
+                                <span id="ready"></span>
+                                <span id="lname" value="<%= v.name %>">
+                                    <%= v.name %>
+
+                                </span>
+                                <span id="llat" value="<%= v.latitude %>" style="visibility: hidden;"></span>
+                                <span id="llong" value="<%= v.longitude %>" style="visibility: hidden;"></span></a>
+                        </div>
+                        <div id="field1">
+                            <div id="bgrtwo">
+                                <br />
+                                <br />
+                                <div id="location"></div>
+                                <br />
+                                <div id="error-message"></div>
+                                <div id="device-lat"></div>
+                                <div id="device-long"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="field1"></div>
-                    <br />
+
+                </div>
+                </div>
                 </div>
                 <br>
 
@@ -104,6 +124,8 @@
         </main>
         <!-- <script type="module" src="./scripts/main.js "></script> -->
         <link href="../public/Styles/main.css" rel="stylesheet" type="text/css">
+        <!-- <script type="module" src="./scripts/main.js"></script> -->
+        <script type="module" src="/scripts/main.js"></script>
     </body>
     <br>
     <footer class="foot">
@@ -111,3 +133,5 @@
         <a href="https://github.com/Puneeth159/fsa-group-7">
             <i class="fab fa-github "></i> GitHub</a>
     </footer>
+
+</html>

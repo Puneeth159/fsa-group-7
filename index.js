@@ -47,7 +47,7 @@ app.use(bodyParser.json({ type: "application/*+json" }));
 
 app.use(express.static(__dirname + '/public/'));
 app.use(express.static(__dirname + '/location/'));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then((res) => {
     app.listen(port, function() {
