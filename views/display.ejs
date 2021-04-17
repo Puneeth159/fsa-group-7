@@ -19,6 +19,7 @@
             font-size: 25px;
             height: 50px;
         }
+               
     </style>
 
     <body>
@@ -55,7 +56,7 @@
                                 <form action="/locations/editview/<%= locations[i]._id %>" >
                                     <div class="form">
                                         
-                                        <button type="submit">EDIT<%= locations[i].id %></button>
+                                        <button type="submit" class="btn btn-primary">EDIT<%= locations[i].id %></button>
                                     </div>
                                 </form>
                                 
@@ -63,7 +64,7 @@
                             <td>
                                 <form action="/locations/delete/<%= locations[i]._id %>" method="POST">
                                     <div class="form">
-                                        <button type="submit">Delete<%= locations[i].id %></button>
+                                        <button type="submit" class="btn btn-primary">Delete<%= locations[i].id %></button>
                                     </div>
                                 </form>
                             </td>
