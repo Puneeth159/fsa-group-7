@@ -85,7 +85,7 @@ async function onClickSquareBox2() {
 
         if (isInside() == true) {
             console.log("==========> inside inside")
-            document.getElementById("target").innerHTML = questLocationName;
+            // document.getElementById("target").innerHTML = questLocationName;
 
             let utterance = new SpeechSynthesisUtterance("Congratulations!, You found location ${questLocationName}");
             speechSynthesis.speak(utterance);
