@@ -85,7 +85,7 @@ async function onClickSquareBox2() {
 
         if (isInside() == true) {
             console.log("==========> inside inside")
-            document.getElementById("error").innerHTML = "Congratulations!, You found location ${questLocationName}"+questLocationName;
+            document.getElementById("ready").innerHTML = "Congratulations!, You found location ${questLocationName}"+questLocationName;
 
             let utterance = new SpeechSynthesisUtterance(`Congratulations!, You found location ${questLocationName}`);
             speechSynthesis.speak(utterance);
@@ -98,8 +98,6 @@ async function onClickSquareBox2() {
             document.getElementById("error").innerHTML = "Sorry,You're not near to the treasure";
             let utterance = new SpeechSynthesisUtterance("Sorry,You're not near to the treasure");
             speechSynthesis.speak(utterance);
-        } else {
-            document.getElementById("error").innerHTML = " ";
         }
         console.log(incrementer, "===================>")
 
