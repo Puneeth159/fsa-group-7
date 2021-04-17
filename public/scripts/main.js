@@ -99,7 +99,7 @@ async function onClickSquareBox2() {
             let utterance = new SpeechSynthesisUtterance("Sorry,You're not near to the treasure");
             speechSynthesis.speak(utterance);
         } else {
-            document.getElementById("target1").innerHTML = "";
+            document.getElementById("error").innerHTML = "Sorry,You're not near to the treasure";
         }
         console.log(incrementer, "===================>")
 
