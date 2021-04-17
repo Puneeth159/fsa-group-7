@@ -82,52 +82,57 @@
             <article>
                 <div>
                     <div id="container">
-                        <div id="bgrone">
+                        <div id="field" >
+                            <div id="bgrone">
+                                <br> Quest Location Name: <br>
+                         
+                                <div id="ready"></div>
 
-                            <a id="field">
-                                <span id="ready"></span>
-                                <span id="ready1"></span>
-                                <span id="lname" value="<%= v.name %>">
-                                    <%= v.name %>
-
-                                </span>
+                            <div id="ready1"></div>
+                                <span id="lname" style="color: black ; visibility: hidden" value="<%= v.locationName %>" > <%= v.locationName %></span>
                                 <span id="llat" value="<%= v.latitude %>" style="visibility: hidden;"></span>
-                                <span id="llong" value="<%= v.longitude %>" style="visibility: hidden;"></span></a>
-                        </div>
-                        <div id="field1">
-                            <div id="bgrtwo">
-                                <br />
-                                <br />
-                                <div id="location"></div>
-                                <br />
-                                <div id="error-message"></div>
-                                <div id="device-lat"></div>
-                                <div id="device-long"></div>
-                                <div id="error"></div>
+                                <span id="llong" value="<%= v.longitude %>" style="visibility: hidden;"></span>
+                                
                             </div>
+                        </div>
+                        
+                        
+                        <div id="field1">
+                            <div id="targetloc"></div>
+                                <div id="lbl"></div>
+                                <br />
+                                <div id="device-lat1" style="color: white;"></div>
+                                <br />
+                                <div id="device-long1" style="color: white;"></div>
+                                <br />
+                                <div id="error" style="color: white;"></div>
+
+                        </div>
+                        <br />
+                    </div>
+                    <!-- <div class = "d">
+                        <button type="button" class="btn btn-black" onclick="productUpdate();">Add locations</button>
+                    </div> -->
+                    <br>
+                    <br>
+                    <div class="p">
+                        <div class="form-group">
+                            <form action="https://locandyy.herokuapp.com/locations/create">
+                                <input type="submit" value="Add Location" id="t" />
+                            </form>
+                        </div>
+                        <div class="form-group1">
+                            <form action="https://locandyy.herokuapp.com/locations/">
+                                <input type="submit" value="Display Locations" id="t" />
+                            </form>
                         </div>
                     </div>
 
+                    <!-- <div class = "d">
+                        <button type="button" class="btn btn-black" onclick="displays()">Add locations</button>
+                    </div> -->
                 </div>
                 </div>
-                </div>
-                <br>
-
-
-                <div class="form-group">
-                    <form action="https://fsa-group-7.herokuapp.com/locations/create">
-                        <input type="submit" value="Add Location" id="e" />
-                    </form>
-                </div>
-                <div class="form-group-1">
-                    <form action="https://fsa-group-7.herokuapp.com/locations/">
-                        <input type="submit" value="Display Location" id="e" />
-                    </form>
-                </div>
-                </div>
-                </div>
-                <br>
-                <br><br><br>
             </article>
         </main>
         <!-- <script type="module" src="./scripts/main.js "></script> -->

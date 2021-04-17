@@ -1,5 +1,5 @@
-let colorElement = document.getElementById("bgrtwo");
-let colorElement1 = document.getElementById("bgrone")
+let colorElement = document.getElementById("field1");
+let colorElement1 = document.getElementById("field")
 var questLocationName = document.getElementById("lname").getAttribute("value");
 var questLocationLat = document.getElementById("llat").getAttribute("value");
 var questLocationLong = document.getElementById("llong").getAttribute("value");
@@ -7,11 +7,12 @@ let incrementer = 1;
 
 function main() {
     console.log('Page is fully loaded');
-    console.log(questLocationLat);
+    console.log(questLocationName);
     if (incrementer == 1) {
         document.getElementById("ready").innerHTML = "Click to start playing";
         document.getElementById("ready1").innerHTML = " ";
-        // let utterance = new SpeechSynthesisUtterance("Click to start playing");
+        document.getElementById("lname").innerHTML="questLocationName"
+        // let utterance = new SpeechSynthesisUtterance("Your Location is ready. Find it.");
         // speechSynthesis.speak(utterance);
         document.getElementById("lname").innerHTML = "        ";
     }
@@ -73,10 +74,10 @@ async function onClickSquareBox2() {
         // document.getElementById("location").innerHTML = loc;
         currentlat = locText.coords.latitude;
         console.log("============>clat", currentlat)
-        document.getElementById("device-lat").innerHTML = currentlat.toFixed(9);
+        document.getElementById("device-lat1").innerHTML = currentlat.toFixed(9);
         currentlon = locText.coords.longitude;
         console.log(currentlon)
-        document.getElementById("device-long").innerHTML = currentlon.toFixed(9);
+        document.getElementById("device-long1").innerHTML = currentlon.toFixed(9);
         console.log("===============before is inside");
         console.log(questLocationLat);
 
