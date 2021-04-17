@@ -18,9 +18,9 @@ This is a full stack application
 </table>
 
 ## Stack Information:
-* Environment: Node js
+* Platform: Node js
 * Database: Mongo DB
-* Back End: Express js
+* Framework: Express js
 * Front End: HTML,CSS,JavaScript.
 
 ## References
