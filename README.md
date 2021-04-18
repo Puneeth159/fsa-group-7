@@ -23,9 +23,6 @@ This is a full stack application
 * Framework: Express js
 * Front End: HTML,CSS,JavaScript.
 
-## Presentation :
- - https://docs.google.com/presentation/d/1uM9TToiIwhhi_4ScdLUhDDsAeKNiHdFdhwP2V1vqudM/edit?usp=sharing
-
 ## References
 
 - https://expressjs.com/en/starter/hello-world.html
