@@ -1,4 +1,4 @@
-# fsa-group-7
+# Treasure Finder Game
 This is a full stack application
 
 ## About Application
