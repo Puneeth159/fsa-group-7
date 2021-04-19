@@ -14,6 +14,7 @@ function main() {
         document.getElementById("lname").innerHTML="questLocationName"
         // let utterance = new SpeechSynthesisUtterance("Your Location is ready. Find it.");
         // speechSynthesis.speak(utterance);
+        console.log(questLocationName);
         document.getElementById("lname").innerHTML = "        ";
     }
     incrementer = 0;
@@ -85,9 +86,9 @@ async function onClickSquareBox2() {
 
         if (isInside() == true) {
             console.log("==========> inside inside")
-            document.getElementById("targetloc").innerHTML = "Congratulations!, You found location"+questLocationName;
+            document.getElementById("targetloc").innerHTML = "Congratulations!, You found location  "+questLocationName;
 
-            let utterance = new SpeechSynthesisUtterance(`Congratulations!, You found location ${questLocationName}`);
+            let utterance = new SpeechSynthesisUtterance(`Congratulations!, You found location   ${questLocationName}`);
             speechSynthesis.speak(utterance);
             console.log(questLocationLat);
             error = false;
